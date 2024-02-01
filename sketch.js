@@ -1,24 +1,31 @@
 let particles=[];
+let attractor;
+let colors = ['#9d686b' ,'#3d4355' ,'#c18512' ,'#c68413','#d2be68','#a53e2c' ,'#41556d','#cf9f6d','#661f24','#73343c','#aa926e',
+'#e4a77b','#a8585b','#b0865c','#cf4145','#3d4349','#d9be70','#1c1734','#48030d' ,'#884f51','#a98214','#98676b','#d08913','#936d1b' ,'#64545f' ,'#64545f','#1b263b','#1b263b' ,'#bf504b' ,'#bd9f7a' ,'#26242f' ,'#b09d7c','#928e67','#a35120','#41495c'];
 function setup (){
 createCanvas (windowWidth,windowHeight);
+
+attractor=new Attractor ()
 
 for(let i=0; i<50; i++) {
     let x=random(width);
     let y=random (height);
-    particles [i]=new Particles (x,y);
+    let col=random(colors);
+    let mass=random (0,20)
+    particles [i]=new Particles (x,y,color(col),mass);
 }
 
 }
 
 function draw (){
-background ('blue');
-let x=mouseX/10
-console.log(x)
-let force= createVector(0.001,0.1)
+background (0);
+
+
 for (let p of particles){
-    p.show();
-    p.update();
-    p.applyForce (force);
+
+ p.update();
+ p.show();
+ attractor.attract(p);
 }
 
 }
