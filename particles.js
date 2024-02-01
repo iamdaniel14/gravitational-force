@@ -6,7 +6,7 @@ this.vel=p5.Vector.random2D();
 this.acc=createVector(0,1);
 this.x=x;
 this.y=y;
-this.r=random(20,40);
+this.r=random(20,30);
     }
 
 applyForce (force){
