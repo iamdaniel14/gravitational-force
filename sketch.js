@@ -11,7 +11,7 @@ for(let i=0; i<50; i++) {
     let x=random(width);
     let y=random (height);
     let col=random(colors);
-    let mass=random (0,20)
+    let mass=random (4,20)
     particles [i]=new Particles (x,y,color(col),mass);
 }
 
@@ -29,3 +29,7 @@ for (let p of particles){
 }
 
 }
+function windowResized () {
+    resizeCanvas (windowWidth,windowHeight);
+    setup()
+  }
