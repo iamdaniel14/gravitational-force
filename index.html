@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>particle systems</title>
 </head>
 <body>
+
+    <form action="">
+
+        <div class="input-class">
+            <label for="numberOfParticles">Number of particles:</label>
+           <P id="numberOfParticles"></P>
+            </div>
+         <div class="input-class">
+         <label for="col">Background color</label>
+        <input id="col" type="color">
+         </div>
+
+        <div class="input-class"> 
+        <label for="checkbox">Gravitational force</label>
+        <input id="checkbox" type="checkbox" checked="checked">
+       </div>
+
+       <div class="input-class"> 
+        <label id="particle" for="checkbox">*Press the mouse button to add a particle </label>
+     
+       </div>
+    </form>
 
     <script src="sketch.js"></script>
     <script src="particles.js"></script>

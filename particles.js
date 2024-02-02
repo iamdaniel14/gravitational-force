@@ -10,7 +10,7 @@ this.r=sqrt(this.mass)*10;
     }
 
 applyForce(force){
- //force=mass times acceleration
+ //acc=force divide by mass 
  let f=p5.Vector.div(force,this.mass);
  this.acc.add(f);      
     }
@@ -19,11 +19,24 @@ fill(this.col)
 noStroke();
 circle(this.pos.x,this.pos.y, this.r*2);
     }
+
+
 update (){
 this.vel.add (this.acc);
-this.vel.limit (5);
+this.vel.limit (4);
 this.pos.add(this.vel);
-this.acc.set(0,0);
+this.acc.set(0,0); //rest acceleration to 0 in every frame
+this.edges();
+    }
+
+ edges () {
+if (this.pos.x>width-this.r || this.pos.x<this.r){
+
+    this.vel.x*=-1;
+} else if (this.pos.y>height-this.r || this.pos.y<this.r){
+this.vel.y*=-1;
+}
+
     }
 
 }

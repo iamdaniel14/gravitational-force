@@ -1,0 +1,42 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    box-sizing: border-box;
+    }
+    
+    form {
+    position: absolute;
+    width: 200px;
+    background-color: rgb(200, 26, 232);
+    padding-left: 20px;
+    
+    }
+    .input-class{
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    }
+    
+     label{
+    color:white;
+       
+     }
+
+     .input-class label {
+        margin-right:1px;
+      }
+   
+
+   #numberOfParticles{
+   color: rgb(158, 27, 27);
+   font-size: 25px;
+     }
+
+    #particle{
+     color: rgb(181, 137, 137);
+     padding: 4px;
+
+     }
+    
