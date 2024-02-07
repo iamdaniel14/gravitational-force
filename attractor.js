@@ -13,10 +13,9 @@ circle(this.pos.x,this.pos.y,this.r*2);
 let force=p5.Vector.sub(this.pos,particles.pos);
 let dSqr=force*force;
 dSqr=constrain(dSqr,2,(width,height)); //limit the distance square btn 0 and (width,height);
-force.normalize();
+//force.normalize();
 let strength=this.G*(this.EarthMass*particles.mass)/dSqr;
 force.setMag(strength);
-
 if(checkbox.checked()) { 
 particles.applyForce(force);
     }}
